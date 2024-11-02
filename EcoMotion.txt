@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMotion</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sections Styling */
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Specific Section Styles */
+        #about {
+            background: #fff;
+            padding-top: 60px;
+        }
+
+        #investments {
+            background: #e8f5e9;
+        }
+
+        #payment {
+            background: #fff;
+        }
+
+        #contact {
+            background: #e8f5e9;
+        }
+
+        footer {
+            background: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <h1>EcoMotion</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#investments">Investment Options</a></li>
+                <li><a href="#payment">Payment Methods</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Sections -->
+    <main>
+        <section id="about">
+            <h2>Invest in Africa’s Eco-Friendly Transport Future</h2>
+            <p>EcoMotion has partnered with MOOVE to strengthen its role as Africa’s leading investment platform for sustainable transportation solutions. This strategic alliance allows us to expand our fleet to include more electric and hybrid vehicles, offering investors innovative, eco-conscious opportunities. With enhanced investment tracking and exceptional customer service, we aim to provide a seamless experience.</p>
+        </section>
+
+        <section id="investments">
+            <h2>Investment Options</h2>
+            <ul>
+                <li><strong>EcoCar Basic Series-01</strong> - GHC 50, Daily Income: GHC 13, Total Revenue: GHC 650</li>
+                <li><strong>EcoCar Basic Series-02</strong> - GHC 100, Daily Income: GHC 26, Total Revenue: GHC 1,300</li>
+                <li><strong>EcoMoto Adventure Series-01</strong> - GHC 250, Daily Income: GHC 65, Total Revenue: GHC 3,250</li>
+                <li><strong>EcoMoto Adventure Series-02</strong> - GHC 500, Daily Income: GHC 133, Total Revenue: GHC 6,650</li>
+                <li><strong>EcoCar Deluxe Series-01</strong> - GHC 1,000, Daily Income: GHC 270, Total Revenue: GHC 13,500</li>
+                <li><strong>EcoMoto Elite Series-01</strong> - GHC 2,000, Daily Income: GHC 540, Total Revenue: GHC 27,000</li>
+                <li><strong>EcoCar Premium Series-01</strong> - GHC 3,000, Daily Income: GHC 800, Total Revenue: GHC 40,000</li>
+            </ul>
+        </section>
+
+        <section id="payment">
+            <h2>Payment Methods</h2>
+            <p>MTN Mobile Number: <strong>0553099815</strong></p>
+            <p>Telecel Number: <strong>0209565333</strong></p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For inquiries or partnership opportunities, contact us at <strong>0553099855</strong>.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoMotion. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Scroll Animation -->
+    <script>
+        document.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const scrollPos = window.scrollY + window.innerHeight - 100;
+            sections.forEach(section => {
+                if (section.offsetTop < scrollPos) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
